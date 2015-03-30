@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace HTK_Support_Tool
 {
@@ -24,13 +26,10 @@ namespace HTK_Support_Tool
         {
             var ip4Address = String.Empty;
 
-            foreach (var ipa in Dns.GetHostAddresses(Dns.GetHostName()))
+            foreach (var ipa in Dns.GetHostAddresses(Dns.GetHostName()).Where(ipa => ipa.AddressFamily == AddressFamily.InterNetwork))
             {
-                if (ipa.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    ip4Address = ipa.ToString();
-                    break;
-                }
+                ip4Address = ipa.ToString();
+                break;
             }
 
             return ip4Address;
@@ -47,6 +46,11 @@ namespace HTK_Support_Tool
             }
 
             return hostName; // return the fully qualified name aaa
+        }
+
+        public static bool IsOlInstalled()
+        {
+            return Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Sage\Office Line", false) != null;
         }
     }
 }

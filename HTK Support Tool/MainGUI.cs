@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
@@ -14,6 +15,11 @@ namespace HTK_Support_Tool
             lblDomain.Text = IPGlobalProperties.GetIPGlobalProperties().DomainName;
             lblComputerIP.Text = Program.GetIp4Address();
             lblFqdn.Text = Program.GetFqdn();
+            cbOLInstalled.Checked = Program.IsOlInstalled();
+            if (Program.IsOlInstalled())
+            {
+                cbOLInstalled.ForeColor = System.Drawing.ColorTranslator.FromHtml("#298A08");
+            }
         }
 
         private void lblComputerIP_Click(object sender, EventArgs e)

@@ -48,9 +48,11 @@ namespace HTK_Support_Tool
             this.lblComputername_lbl = new System.Windows.Forms.Label();
             this.tabOfficeLine = new System.Windows.Forms.TabPage();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.cbOLInstalled = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabInfo.SuspendLayout();
+            this.tabOfficeLine.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,7 +109,7 @@ namespace HTK_Support_Tool
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 395);
+            this.tabControl1.Size = new System.Drawing.Size(755, 398);
             this.tabControl1.TabIndex = 1;
             // 
             // tabInfo
@@ -123,7 +125,7 @@ namespace HTK_Support_Tool
             this.tabInfo.Location = new System.Drawing.Point(4, 22);
             this.tabInfo.Name = "tabInfo";
             this.tabInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInfo.Size = new System.Drawing.Size(747, 369);
+            this.tabInfo.Size = new System.Drawing.Size(747, 372);
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "Info";
             this.tabInfo.UseVisualStyleBackColor = true;
@@ -212,20 +214,33 @@ namespace HTK_Support_Tool
             // 
             // tabOfficeLine
             // 
+            this.tabOfficeLine.Controls.Add(this.cbOLInstalled);
             this.tabOfficeLine.Location = new System.Drawing.Point(4, 22);
             this.tabOfficeLine.Name = "tabOfficeLine";
             this.tabOfficeLine.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOfficeLine.Size = new System.Drawing.Size(747, 369);
+            this.tabOfficeLine.Size = new System.Drawing.Size(747, 372);
             this.tabOfficeLine.TabIndex = 1;
             this.tabOfficeLine.Text = "Office Line";
             this.tabOfficeLine.UseVisualStyleBackColor = true;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(560, 428);
+            this.progressBar1.Location = new System.Drawing.Point(560, 427);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(191, 23);
             this.progressBar1.TabIndex = 0;
+            // 
+            // cbOLInstalled
+            // 
+            this.cbOLInstalled.AutoCheck = false;
+            this.cbOLInstalled.AutoSize = true;
+            this.cbOLInstalled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOLInstalled.Location = new System.Drawing.Point(8, 15);
+            this.cbOLInstalled.Name = "cbOLInstalled";
+            this.cbOLInstalled.Size = new System.Drawing.Size(143, 17);
+            this.cbOLInstalled.TabIndex = 1;
+            this.cbOLInstalled.Text = "Office Line installiert";
+            this.cbOLInstalled.UseVisualStyleBackColor = true;
             // 
             // MainGui
             // 
@@ -237,12 +252,14 @@ namespace HTK_Support_Tool
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainGui";
-            this.Text = "Form1";
+            this.Text = "HTK Support Tool";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
+            this.tabOfficeLine.ResumeLayout(false);
+            this.tabOfficeLine.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,6 +285,7 @@ namespace HTK_Support_Tool
         private System.Windows.Forms.Label lblComputerIP;
         private System.Windows.Forms.Label lblFqdn;
         private System.Windows.Forms.Label lblFqdn_lbl;
+        private System.Windows.Forms.CheckBox cbOLInstalled;
     }
 }
 
