@@ -38,6 +38,9 @@ namespace HTK_Support_Tool
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.gbSageProducts = new System.Windows.Forms.GroupBox();
+            this.cbOLInstalled = new System.Windows.Forms.CheckBox();
+            this.cbAsInstalled = new System.Windows.Forms.CheckBox();
             this.lblFqdn = new System.Windows.Forms.Label();
             this.lblFqdn_lbl = new System.Windows.Forms.Label();
             this.lblComputerIP = new System.Windows.Forms.Label();
@@ -48,11 +51,10 @@ namespace HTK_Support_Tool
             this.lblComputername_lbl = new System.Windows.Forms.Label();
             this.tabOfficeLine = new System.Windows.Forms.TabPage();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.cbOLInstalled = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabInfo.SuspendLayout();
-            this.tabOfficeLine.SuspendLayout();
+            this.gbSageProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,7 +80,7 @@ namespace HTK_Support_Tool
             // neuStartenToolStripMenuItem
             // 
             this.neuStartenToolStripMenuItem.Name = "neuStartenToolStripMenuItem";
-            this.neuStartenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.neuStartenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.neuStartenToolStripMenuItem.Text = "Neu starten";
             this.neuStartenToolStripMenuItem.Click += new System.EventHandler(this.neuStartenToolStripMenuItem_Click);
             // 
@@ -114,6 +116,7 @@ namespace HTK_Support_Tool
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.gbSageProducts);
             this.tabInfo.Controls.Add(this.lblFqdn);
             this.tabInfo.Controls.Add(this.lblFqdn_lbl);
             this.tabInfo.Controls.Add(this.lblComputerIP);
@@ -129,6 +132,41 @@ namespace HTK_Support_Tool
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "Info";
             this.tabInfo.UseVisualStyleBackColor = true;
+            // 
+            // gbSageProducts
+            // 
+            this.gbSageProducts.Controls.Add(this.cbOLInstalled);
+            this.gbSageProducts.Controls.Add(this.cbAsInstalled);
+            this.gbSageProducts.Location = new System.Drawing.Point(11, 95);
+            this.gbSageProducts.Name = "gbSageProducts";
+            this.gbSageProducts.Size = new System.Drawing.Size(290, 65);
+            this.gbSageProducts.TabIndex = 11;
+            this.gbSageProducts.TabStop = false;
+            this.gbSageProducts.Text = "Sage Produkte";
+            // 
+            // cbOLInstalled
+            // 
+            this.cbOLInstalled.AutoCheck = false;
+            this.cbOLInstalled.AutoSize = true;
+            this.cbOLInstalled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOLInstalled.Location = new System.Drawing.Point(6, 19);
+            this.cbOLInstalled.Name = "cbOLInstalled";
+            this.cbOLInstalled.Size = new System.Drawing.Size(175, 17);
+            this.cbOLInstalled.TabIndex = 9;
+            this.cbOLInstalled.Text = "Office Line nicht installiert";
+            this.cbOLInstalled.UseVisualStyleBackColor = true;
+            // 
+            // cbAsInstalled
+            // 
+            this.cbAsInstalled.AutoCheck = false;
+            this.cbAsInstalled.AutoSize = true;
+            this.cbAsInstalled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAsInstalled.Location = new System.Drawing.Point(6, 42);
+            this.cbAsInstalled.Name = "cbAsInstalled";
+            this.cbAsInstalled.Size = new System.Drawing.Size(217, 17);
+            this.cbAsInstalled.TabIndex = 10;
+            this.cbAsInstalled.Text = "Application Server nicht installiert";
+            this.cbAsInstalled.UseVisualStyleBackColor = true;
             // 
             // lblFqdn
             // 
@@ -214,7 +252,6 @@ namespace HTK_Support_Tool
             // 
             // tabOfficeLine
             // 
-            this.tabOfficeLine.Controls.Add(this.cbOLInstalled);
             this.tabOfficeLine.Location = new System.Drawing.Point(4, 22);
             this.tabOfficeLine.Name = "tabOfficeLine";
             this.tabOfficeLine.Padding = new System.Windows.Forms.Padding(3);
@@ -229,18 +266,6 @@ namespace HTK_Support_Tool
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(191, 23);
             this.progressBar1.TabIndex = 0;
-            // 
-            // cbOLInstalled
-            // 
-            this.cbOLInstalled.AutoCheck = false;
-            this.cbOLInstalled.AutoSize = true;
-            this.cbOLInstalled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOLInstalled.Location = new System.Drawing.Point(8, 15);
-            this.cbOLInstalled.Name = "cbOLInstalled";
-            this.cbOLInstalled.Size = new System.Drawing.Size(143, 17);
-            this.cbOLInstalled.TabIndex = 1;
-            this.cbOLInstalled.Text = "Office Line installiert";
-            this.cbOLInstalled.UseVisualStyleBackColor = true;
             // 
             // MainGui
             // 
@@ -258,8 +283,8 @@ namespace HTK_Support_Tool
             this.tabControl1.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
-            this.tabOfficeLine.ResumeLayout(false);
-            this.tabOfficeLine.PerformLayout();
+            this.gbSageProducts.ResumeLayout(false);
+            this.gbSageProducts.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,7 +310,9 @@ namespace HTK_Support_Tool
         private System.Windows.Forms.Label lblComputerIP;
         private System.Windows.Forms.Label lblFqdn;
         private System.Windows.Forms.Label lblFqdn_lbl;
+        private System.Windows.Forms.GroupBox gbSageProducts;
         private System.Windows.Forms.CheckBox cbOLInstalled;
+        private System.Windows.Forms.CheckBox cbAsInstalled;
     }
 }
 

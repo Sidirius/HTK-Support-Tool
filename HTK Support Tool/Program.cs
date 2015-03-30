@@ -52,5 +52,10 @@ namespace HTK_Support_Tool
         {
             return Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Sage\Office Line", false) != null;
         }
+
+        public static bool IsAsInstalled()
+        {
+            return Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Sage\Application Server", false) != null;
+        }
     }
 }

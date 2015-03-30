@@ -19,6 +19,13 @@ namespace HTK_Support_Tool
             if (Program.IsOlInstalled())
             {
                 cbOLInstalled.ForeColor = System.Drawing.ColorTranslator.FromHtml("#298A08");
+                cbOLInstalled.Text = @"Office Line installiert";
+            }
+            cbAsInstalled.Checked = Program.IsAsInstalled();
+            if (Program.IsAsInstalled())
+            {
+                cbAsInstalled.ForeColor = System.Drawing.ColorTranslator.FromHtml("#298A08");
+                cbAsInstalled.Text = @"Application Server installiert";
             }
         }
 
