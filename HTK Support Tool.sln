@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTK Support Tool", "HTK Support Tool\HTK Support Tool.csproj", "{39904FF5-F9D9-4AB3-96ED-32CC1236BDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39904FF5-F9D9-4AB3-96ED-32CC1236BDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39904FF5-F9D9-4AB3-96ED-32CC1236BDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39904FF5-F9D9-4AB3-96ED-32CC1236BDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39904FF5-F9D9-4AB3-96ED-32CC1236BDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
